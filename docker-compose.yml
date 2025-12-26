@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/usr/src/app
+      - ./backend/.wwebjs_auth:/usr/src/app/.wwebjs_auth
+      - /usr/src/app/node_modules
