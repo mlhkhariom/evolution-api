@@ -1,0 +1,24 @@
+.admin-dashboard-container {
+  background-color: #111b21;
+  color: #e4e6eb;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  background-color: #2a2f32;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.dashboard-main {
+  padding: 2rem;
+}
+
+.dashboard-main p {
+  font-size: 1.1rem;
+}

@@ -1,0 +1,34 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #111b21;
+  color: #e4e6eb;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.login-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.login-container img {
+  width: 300px;
+  height: 300px;
+  border: 5px solid #fff;
+}
