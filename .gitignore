@@ -97,3 +97,12 @@ typings/
 # IDE files
 .vscode/
 .idea/
+
+# Laravel Project
+laravel/vendor
+laravel/node_modules
+laravel/storage/framework/sessions
+laravel/storage/framework/views
+laravel/storage/framework/cache
+laravel/storage/logs
+laravel/.env

@@ -13,6 +13,19 @@ datasource db {
   url      = env("DATABASE_CONNECTION_URI")
 }
 
+model User {
+  id               String    @id @default(cuid())
+  email            String    @unique
+  password         String
+  aiChatbotEnabled Boolean   @default(false)
+  aiApiKey         String?
+  aiPrompt         String?
+  licenseStatus    String    @default("active")
+  instance         Instance?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
+
 enum InstanceConnectionStatus {
   open
   close
@@ -77,6 +90,8 @@ model Instance {
   disconnectionAt         DateTime?                @db.Timestamp
   createdAt               DateTime?                @default(now()) @db.Timestamp
   updatedAt               DateTime?                @updatedAt @db.Timestamp
+  userId                  String?                  @unique
+  user                    User?                    @relation(fields: [userId], references: [id])
   Chat                    Chat[]
   Contact                 Contact[]
   Message                 Message[]
